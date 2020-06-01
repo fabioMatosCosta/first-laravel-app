@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->id();
             $table->string('name');
-            $table->text('messages');
+            $table->text('messages')->nullable();
             $table->timestamps();
         });
     }

@@ -20,6 +20,11 @@ use App\User;
 
 Route::get('/', function(){
    $users = User::all();
-   echo $users;
+   $user_names = $users->name;
+   echo $users_names;
+});
 
+Route::get('/messages/{userId}', function($userId){
+    $user = User::find($userId);
+    return response()->json($user, 200);;
 });
