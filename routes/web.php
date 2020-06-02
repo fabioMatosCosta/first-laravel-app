@@ -28,3 +28,9 @@ Route::get('/messages/{userId}', function($userId){
     $user = User::find($userId);
     return response()->json($user, 200);;
 });
+
+// Route::post('/send/{userId}', function($userId){
+    
+//     $user = User::find($userId);
+//     $user->messages = ;
+// })
